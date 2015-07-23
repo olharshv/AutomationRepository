@@ -115,19 +115,21 @@ public class Practice {
         //to do
         int[] notstrings = {1, 2, 3, 4, 1, 3, 1, 6, 6, 1, 1};
         int target = 1;
-        for (i = 0; i < strings.length; i++){
-        if (notstrings[i] == target) {
-            System.out.println(i+1);
+        for (i = 0; i < strings.length; i++) {
+            if (notstrings[i] == target) {
+                System.out.println(i + 1);
+            }
         }
-
         //to do
             int[] input = {1, 2, 3, 4, 1, 3, 1, 6, 6, 1, 1};
             int isAllLessThan = 3;
             System.out.println("new to do = ");
-            System.out.println(input[i] > isAllLessThan);
+            for (j = 0; j < strings.length; j++) {
+                if (input[j] > isAllLessThan) {
+                    System.out.println(input[j] > isAllLessThan);
+                }
+            }
 
 
-
-        }
     }
 }
