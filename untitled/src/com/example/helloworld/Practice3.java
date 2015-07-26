@@ -74,16 +74,33 @@ public class Practice3 {
             System.out.println (aa - bbbb);
         }
 
+//TO DO
         boolean anti = false;
-        boolean oper1 = false;
-        if (oper1 && anti){
-            System.out.println(oper1&&anti);
-        } else {
-            System.out.println (oper1);
+        System.out.println(!anti);
+
+//TO DO
+        int[] notstrings = {1, 7, 1, 4, 1, 7, 9, 6, 13, 1, 7};
+        int target = 7;
+        int target_count =0;
+        int length = notstrings.length;
+        for (int tar = 0; tar < length; tar++){
+        if (notstrings[tar] == target) {
+            target_count = target_count + 1;
         }
+        }
+        System.out.println(target_count);
 
-
-
+//TO DO
+        int[] notstrings1 = {-5, -10, -1, -1, -2, -5, -9, 0, -11, -10, -100};
+        int isAllLessThan = 0;
+        boolean isAllLessThan_check = true;
+        int length1 = notstrings1.length;
+        for (int tar = 0; tar < length1; tar++) {
+            if (notstrings1[tar] >= isAllLessThan) {
+                isAllLessThan_check = false;
+            }
+        }
+            System.out.println(isAllLessThan_check);
 
     }
 }
