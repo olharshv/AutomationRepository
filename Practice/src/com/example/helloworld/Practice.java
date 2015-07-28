@@ -112,7 +112,7 @@ public class Practice {
             }
         }
 
-        //to do
+        //to do!!! ввести счетчик result int result = 0; в цикле делать result++; и выводить result
         int[] notstrings = {1, 2, 3, 4, 1, 3, 1, 6, 6, 1, 1};
         int target = 1;
         for (i = 0; i < strings.length; i++) {
