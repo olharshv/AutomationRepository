@@ -39,5 +39,9 @@ public class Practice4 {
             System.out.println(failed_count);
         }
 
+
+        System.out.println(passed_count + " tests passed;" + failed_count + " tests failed");
+
+
     }
 }
