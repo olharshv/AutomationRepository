@@ -84,7 +84,7 @@ public class Practice4 {
         //to do4
         int [] mas1 = {1, 2, 3};
         int [] mas2 = {1, 2, 3, 4};
-        ArrayTrueFalse(m1, m2);
+        ArrayDiffLength(mas1, mas2);
     }
 
     //practice 5. functions. объ€вл€ем ф-ю в классе, но за пределами void main!!!
@@ -121,9 +121,7 @@ public class Practice4 {
     public static boolean ArrayTrueFalse (int[] m1, int[]m2){
         boolean check = true;
         for (int i = 0; i < m1.length; i++){
-            if (m1[i] == m2[i]){
-                check = true;
-            } else {
+            if (m1[i] != m2[i]){
                 check = false;
             }
         }
@@ -136,19 +134,17 @@ public class Practice4 {
 
     public static boolean ArrayDiffLength (int[] mas1, int[] mas2){
         boolean check = true;
-        int lengthMas1 = mas1.length;
-        int lengthMas2 = mas2.length;
-        if (lengthMas1 == lengthMas2){
-            for (int i = 0; i < lengthMas2; i++){
-                if (mas1[i] == mas2[i]){
-                    return check = true;
-                } else {
-                    return check = false;
+        if (mas1.length != mas2.length) {
+            check = false;
+        } else {
+            for (int i = 0; i < mas2.length; i++){
+                if (mas1[i] != mas2[i]){
+                    check = false;
                 }
             }
-    }
-    System.out.println(check);
-    return check;
+        }
+        System.out.println(check);
+        return check;
     }
 
 }
