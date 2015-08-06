@@ -1,10 +1,10 @@
-/**
+package com.example.helloworld; /**
  * Created by OlhaY on 8/5/2015.
  */
 
 import java.util.ArrayList;
 import java.util.Arrays;
-//Дописать недостающие функции в классе Quiz6HomeWork.
+//Дописать недостающие функции в классе com.example.helloworld.Quiz6HomeWork.
 public
 class Quiz6HomeWork {
     public static void main(String[] args) {
