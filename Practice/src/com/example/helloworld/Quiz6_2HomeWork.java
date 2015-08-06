@@ -1,6 +1,8 @@
 package com.example.helloworld;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.regex.*;
+
 /**
  * Created by OlhaY on 8/6/2015.
  */
@@ -81,19 +83,52 @@ public class Quiz6_2HomeWork {
 
     public static void test(String expected, String actual) {
         // Дописать код сюда
+        boolean check = false;
+        if (expected.equals(actual)) {
+            check = true;
+        } else {
+            check = false;
+        }
     }
 
     public static String hello(String who) {
         // Дописать код сюда
+        return  who;
     }
 
     public static String hello(int howMany) {
         // Дописать код сюда
+        String howManyStr;
+        String howMany1;
+        if (howMany == 0) {
+            howManyStr = "No one came.";
+        } else {
+            if (howMany == 1) {
+                howManyStr = "Hello student!";
+            }
+        }
+        return howManyStr;
     }
     public static String hello(int howMany, String whom) {
         // Дописать код сюда
+
     }
 
     // Дописать функции сюда
+    public static void stringsLength(int strLen, String whom) {
+        // Дописать код сюда
+    }
+
+    public static void reverseInts(ArrayList<String> a) {
+        // Дописать код сюда
+    }
+
+    public static void reverse(ArrayList<String> a) {
+        // Дописать код сюда
+    }
+
+    public static void prettyPrint(ArrayList<String> b) {
+        // Дописать код сюда
+    }
 }
 
