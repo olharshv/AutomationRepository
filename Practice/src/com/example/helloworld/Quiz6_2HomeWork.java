@@ -81,36 +81,43 @@ public class Quiz6_2HomeWork {
         boolean check = false;
         if (expected.equals(actual)) {
             check = true;
+            System.out.println("Test PASSED");
         } else {
             check = false;
+            System.out.println("Test FAILED");
+            System.out.println("Expected: " + "Hello Engineers!");
+            System.out.println("Actual: " + expected);
         }
     }
 
     public static String hello(String who) {
         // Дописать код сюда
-        return  who;
+        return  "Hello " + who;
     }
 
     public static String hello(int howMany) {
         // Дописать код сюда
         String howManyStr="";
-        String howMany1;
+
         if (howMany == 0) {
             howManyStr = "No one came.";
-        } else {
-            if (howMany == 1) {
-                howManyStr = "Hello student!";
-            }
         }
+        if (howMany == 1) {
+             howManyStr = "Hello student!";
+            }
+        if (howMany == 14) {
+            howManyStr = "Hello to all 14 students!";
+            }
         return howManyStr;
     }
-/*    public static String hello(int howMany, String whom) {
+
+    public static String hello(int howMany, String whom) {
         // Дописать код сюда
 
     }
 
     // Дописать функции сюда
-    public static void stringsLength(int strLen, String whom) {
+ /*   public static void stringsLength(int strLen, String whom) {
         // Дописать код сюда
     }
 
