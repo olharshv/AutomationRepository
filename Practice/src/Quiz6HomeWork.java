@@ -4,9 +4,9 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
-//Дописать недостающие функции в классе Quiz6.
+//Дописать недостающие функции в классе Quiz6HomeWork.
 public
-class Quiz6 {
+class Quiz6HomeWork {
     public static void main(String[] args) {
         ArrayList<String> s = new ArrayList<>();
         s.add("a");
