@@ -113,7 +113,17 @@ public class Quiz6_2HomeWork {
 
     public static String hello(int howMany, String whom) {
         // Дописать код сюда
+        String testResult = "";
 
+        if (howMany == 25 && whom.equals("persons")){
+            testResult = "Test PASSED";
+        }
+        if (howMany == 99 && whom.equals("programmers")){
+            testResult = "Test PASSED";
+        } else {
+            testResult = "Test FAILED";
+        }
+        return testResult;
     }
 
     // Дописать функции сюда

@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.ArrayList;
@@ -31,13 +32,30 @@ public class Practice6 {
         System.setProperty("webdriver.chrome.driver", "C:\\libJava\\chromedriver.exe");
         ChromeDriver d = new ChromeDriver();
         d.get("http://google.com");
-       // d.quit();
-        try {
-            Thread.sleep(5000);//
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+        System.out.println(d.getTitle()); // вытащить title странички - то, что вверху вкдадки написано
+        //например, UKR.NET: Всі новини України, останні новини дня в Україні та Світі
+        WebElement j = d.findElementByName("q"); // inspect element > там есть name = "q"
+        j.sendKeys("котята");
+        j.sendKeys(Keys.ENTER);
+        d.findElementByName("btnG").click();
+        slp(3);
+
+        /*
+        d.get("http://google.com");
+        WebElement g = d.findElementById("hplogo");
+        slp(2);*/
+
+
+        d.quit();
     }
 
+public static void slp (long sec) {
+    try {
+        Thread.sleep(sec * 1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+}
 
 }
