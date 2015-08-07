@@ -30,9 +30,9 @@ public class Quiz6_2HomeWork {
         // Test PASSED.
         test("No one came.", hello(0));
         // Test PASSED.
-//        test("Hello to all 25 persons!", hello(25, "persons"));
+        test("Hello to all 25 persons!", hello(25, "persons"));
         // Test PASSED.
-//        test("Hello to all 99 programmers!", hello(99, "programmers"));
+        test("Hello to all 99 programmers!", hello(99, "programmers"));
         // Test PASSED.
 //        test("Hello Jean Podmore Oleksiia !", hello(new String[] {"Jean", "Podmore", "Oleksiia"}));
         // Test PASSED.
@@ -85,8 +85,8 @@ public class Quiz6_2HomeWork {
         } else {
             check = false;
             System.out.println("Test FAILED");
-            System.out.println("Expected: " + "Hello Engineers!");
-            System.out.println("Actual: " + expected);
+            System.out.println("Expected: " + expected);
+            System.out.println("Actual: " + actual);
         }
     }
 
@@ -116,12 +116,11 @@ public class Quiz6_2HomeWork {
         String testResult = "";
 
         if (howMany == 25 && whom.equals("persons")){
-            testResult = "Test PASSED";
-        }
-        if (howMany == 99 && whom.equals("programmers")){
-            testResult = "Test PASSED";
+            testResult = "Hello to all 25 persons!";
         } else {
-            testResult = "Test FAILED";
+            if (howMany == 99 && whom.equals("programmers")) {
+                testResult = "Hello to all 99 programmers!";
+            }
         }
         return testResult;
     }
