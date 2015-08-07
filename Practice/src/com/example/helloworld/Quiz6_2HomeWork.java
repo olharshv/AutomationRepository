@@ -34,9 +34,9 @@ public class Quiz6_2HomeWork {
         // Test PASSED.
         test("Hello to all 99 programmers!", hello(99, "programmers"));
         // Test PASSED.
-//        test("Hello Jean Podmore Oleksiia !", hello(new String[] {"Jean", "Podmore", "Oleksiia"}));
+        test("Hello Jean Podmore Oleksiia !", hello(new String[] {"Jean", "Podmore", "Oleksiia"}));
         // Test PASSED.
-//        test("Hello Anonymous Anonymous2 !", hello(new String[] {"Anonymous", "Anonymous2"}));
+        test("Hello Anonymous Anonymous2 !", hello(new String[] {"Anonymous", "Anonymous2"}));
         // Test PASSED.
 //        test("Hello Slughorn, Norris, Fred and George!", hello(Arrays.asList("Slughorn", "Norris", "Fred", "George")));
         // Test PASSED.
