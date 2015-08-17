@@ -29,7 +29,7 @@ public class XPathPractice {
         buttonGenerate.click();
         Practice8.slp(3);
         WebElement GeneratedPass = drv.findElementByXPath("//td/input[@name = 'password']");
-        System.out.println(GeneratedPass.isDisplayed());
+        System.out.println(GeneratedPass.getAttribute("value"));
         drv.quit();
 
     }
