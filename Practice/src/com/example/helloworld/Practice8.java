@@ -64,6 +64,7 @@ public class Practice8 {
         drv.navigate().back();
         slp(3);
         drv.quit();
+
     }
 
     public static void slp(long sec) {
