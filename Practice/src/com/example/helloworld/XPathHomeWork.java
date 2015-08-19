@@ -12,6 +12,8 @@ public class XPathHomeWork {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver",
                 "C:\\libJava\\chromedriver.exe");
+//ChomeDriver лучше писать WebDriver, т.к. есть еще firefox  и т.п.
+ //       WebDriver drv = new SafariDriver();
 
         ChromeDriver drv = new ChromeDriver();
 
