@@ -63,12 +63,12 @@ public class Practice11 {
     //FAILED
     @Test
     public void testFailed(){
-        Assert.assertEquals(38, sumAll(new int[] {1, 41, 2}));
+        Assert.assertEquals(44, sumAll(new int[] {1, 41, 2}));
     }
 
     @Test
     public void testFailed2(){
-        Assert.assertEquals(2, sumAll(new int[]{-3, 2}));
+        Assert.assertEquals(-1, sumAll(new int[]{-3, 2}));
     }
 
     public static int sumAll(int[] a1){

@@ -13,6 +13,8 @@ public class HomeWork10 {
         System.setProperty("webdriver.chrome.driver", "C:\\libJava\\chromedriver.exe");
         WebDriver drv = new ChromeDriver();
         drv.get("https://stage.tether.to");
+        findElement("//*[@name = 'site']", drv).sendKeys(" ");
+        drv.quit();
 
     }
 
