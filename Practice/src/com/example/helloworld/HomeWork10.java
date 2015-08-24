@@ -26,17 +26,16 @@ public class HomeWork10 {
         //5. Напечатать в консоль сообщение об ошибке от пароля
         System.out.println(findElement("//md-input-container[2]/div/*[@class = 'ng-scope']", drv).getText());
         //6. Заполнить пароль строкой "asd"
-        findElement("//input[@name = 'username']", drv).sendKeys("asd");
+        findElement("//input[@name = 'password']", drv).sendKeys("asd");
         //7. Напечатать в консоль сообщение об ошибке от пароля (должно бьіть другое)
         System.out.println(findElement("//md-input-container[1]/div/*[@class = 'ng-scope']", drv).getText());
         //8. Дописать в пароль еще "fff"
-        findElement("//input[@name = 'username']", drv).sendKeys("fff");
+        findElement("//input[@name = 'password']", drv).sendKeys("fff");
         //9. Напечатать в консоль количество вебєлементов найденньіх по XPath которьій использовали в шагах 5 и 7.
         // (findElements .... .size())
-
+        System.out.println(drv.findElements(By.xpath("//md-input-container[2]/div/*[@class = 'ng-scope']")).size());
+        System.out.println(drv.findElements(By.xpath("//md-input-container[1]/div/*[@class = 'ng-scope']")).size());
         //10. Заполнить в логин "a"
-        findElement("//input[@name = 'username']", drv).clear();
-        slpMs(2000);
         findElement("//input[@name = 'username']", drv).sendKeys("a");
         //11. Напечатать в консоль сообщение об ошибке от логина
         System.out.println(findElement("//md-input-container[1]/div/*[@class = 'ng-scope']", drv).getText());
@@ -44,15 +43,12 @@ public class HomeWork10 {
         findElement("//input[@name = 'username']", drv).sendKeys("qwe");
         //13. Напечатать в консоль количество вебєлементов найденньіх по XPath которьій использовали в шагах 3 и 11.
         // (findElements .... .size())
-
+        System.out.println(drv.findElements(By.xpath("//md-input-container[1]//*[@class='ng-scope']")).size());
+        System.out.println(drv.findElements(By.xpath("//md-input-container[1]/div/*[@class = 'ng-scope']")).size());
         //14. Нажать Log In
         findElement("//button/span", drv).click();
-
-
         slpMs(3000);
-
         drv.quit();
-
     }
 
 //sleep with milli seconds
