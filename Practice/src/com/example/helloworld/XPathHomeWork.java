@@ -65,7 +65,7 @@ public class XPathHomeWork {
 
     }
 
-    public static WebElement findElement(String targetXPath, WebDriver wdr) {
+    public static WebElement weitForElement(String targetXPath, WebDriver wdr) {
         for (int i = 0; i < 600; i++)
         {
             if (wdr.findElements(By.xpath(targetXPath)).size() > 0)
