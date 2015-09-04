@@ -14,8 +14,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * Created by OlhaY on 9/3/2015.
  */
 public class Practice13 {
-//чтобы запускать все тесты надо из мейн убрать аргументы
     public static void main() {
+        //убираем блок из главной функции
+        // и переносим в тесты. из main убрали аргументы - чтобы запускать все тесты сразу, нажав на Practice13>run class
+
        /* System.setProperty("webdriver.chrome.driver", "C:\\libJava\\chromedriver.exe");
         WebDriver drv = new ChromeDriver();
         drv.get("http://angel.net/~nic/passwd.current.html");
@@ -28,7 +30,7 @@ public class Practice13 {
     }
 
     @Test
-    public void test1(){
+    public void test1() {
         setMaster("master", drv);
         setSitename("google.com", drv);
         generate(drv);
@@ -37,7 +39,7 @@ public class Practice13 {
     }
 
     @Test
-    public void test2(){
+    public void test2() {
         setMaster("hello", drv);
         setSitename("google.com", drv);
         generate(drv);
@@ -46,7 +48,7 @@ public class Practice13 {
     }
 //
     @Test
-    public void test3(){
+    public void test3() {
         setMaster("qwe123", drv);
         setSitename("gmail.com", drv);
         submitEnter(drv);
@@ -93,7 +95,6 @@ public class Practice13 {
     }
 
     //функция - нажать кнопку Generate
-
     public static void generate(WebDriver wdr){
         findElement("//td/input[@value = 'Generate']", wdr).click();
     }
@@ -120,7 +121,8 @@ public class Practice13 {
     //объявили переменную drv, которая есть WebDriver
     public WebDriver drv;
 
-    //чтобы после каждого теста закрывался браузер. Иначе при фейле будет открыт браузер и следующие тесты - браузеры открыты, но не закрыты
+    //чтобы после каждого теста закрывался браузер. Иначе при фейле будет открыт браузер
+    // и следующие тесты - браузеры открыты, но не закрыты
     @After
     public void funcAfterEveryTest() {
         drv.quit();
