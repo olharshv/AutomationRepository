@@ -65,6 +65,33 @@ public class Practice13 {
         slpMs(5000);
     }
 
+    @Test
+    public void test5(){
+        setMaster("", drv);
+        setSitename("", drv);
+        generate(drv);
+        Assert.assertEquals("BaefBs8/Z/cm2@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
+    @Test
+    public void test6(){
+        setMaster("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", drv);
+        setSitename("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", drv);
+        generate(drv);
+        Assert.assertEquals("D3YvdfMKPtXGn@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
+    @Test
+    public void test7(){
+        setMaster("", drv);
+        submitEnter(drv);
+        generate(drv);
+        Assert.assertEquals("BaefBs8/Z/cm2@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
     public static void slpMs(long msec) {
         try {
             Thread.sleep(msec);
