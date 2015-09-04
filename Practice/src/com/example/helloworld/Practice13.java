@@ -92,6 +92,52 @@ public class Practice13 {
         slpMs(5000);
     }
 
+    @Test
+    public void test8(){
+        setMaster("333", drv);
+        setSitename("111", drv);
+        generate(drv);
+        Assert.assertEquals("CD/iUTsNwzV4v@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
+    @Test
+    public void test9(){
+        setMaster("111", drv);
+        setSitename("333", drv);
+        generate(drv);
+        Assert.assertEquals("A61tAOVfX4wCm@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
+    @Test
+    public void test10(){
+        setMaster("~!@#$%^&*()_+{}|\":?></\\", drv);
+        setSitename("~!@#$%^&*()_+{}|\":?></\\", drv);
+        generate(drv);
+        Assert.assertEquals("mWxGz2VYwGgZK@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
+
+    @Test
+    public void test11(){
+        setMaster("qwe123", drv);
+        setSitename("asd", drv);
+        generate(drv);
+        Assert.assertEquals("agdjoTB4cjI5E@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
+    @Test
+    public void test12(){
+        setMaster("qwe123", drv);
+        setSitename("ASD", drv);
+        generate(drv);
+        Assert.assertEquals("FkfaCm2ddwvDg@1a", getPassword(drv));
+        slpMs(5000);
+    }
+
     public static void slpMs(long msec) {
         try {
             Thread.sleep(msec);
