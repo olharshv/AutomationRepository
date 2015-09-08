@@ -125,6 +125,7 @@ public static String url = /*"http://angel.net/~nic/passwd.current.html"*/ "http
         TestHelper.slpMs(5000);
     }
 
+    //bug in this test case
     @Test
     public void test13(){
         TestHelper.setMaster("qwe123");
