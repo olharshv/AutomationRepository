@@ -47,6 +47,14 @@ public class TestHelper {
         findElement("//td/input[@name='site']").sendKeys(filledString);;
     }
 
+    public static String getMaster(){
+        return findElement("//td/input[@name='master']").getAttribute("value");
+    }
+
+    public static String getSitename(){
+        return findElement("//td/input[@name='site']").getAttribute("value");
+    }
+
     //функция - нажать кнопку Generate
     static void generate(){
         findElement("//td/input[@value = 'Generate']").click();
@@ -80,11 +88,5 @@ public class TestHelper {
         TestHelper.drv.quit();
     }
 
-    public static String getMaster(){
-        return findElement("//td/input[@name='master']").getAttribute("value");
-    }
 
-    public static String getSitename(){
-        return findElement("//td/input[@name='site']").getAttribute("value");
-    }
 }
