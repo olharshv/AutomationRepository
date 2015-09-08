@@ -11,7 +11,7 @@ import org.junit.Test;
 public class Practice14 {
 //убрать переменную drv из всех функций
     //убираем у ф-й static, чтобы у них был доступ к переменной класса drv
-public static String url = /*"http://angel.net/~nic/passwd.current.html"*/ "http://oxogamestudio.com/passwd.current2.htm";
+public static String url = /*"http://angel.net/~nic/passwd.current.html"*/ /*"http://oxogamestudio.com/passwd.current2.htm"*/"http://oxogamestudio.com/passwd.current3.htm";
 
     public static void main() {
     }
@@ -125,7 +125,7 @@ public static String url = /*"http://angel.net/~nic/passwd.current.html"*/ "http
         TestHelper.slpMs(5000);
     }
 
-    //bug in this test case
+    //bug in this test case. version2
     @Test
     public void test13(){
         TestHelper.setMaster("qwe123");
@@ -133,6 +133,19 @@ public static String url = /*"http://angel.net/~nic/passwd.current.html"*/ "http
         TestHelper.generate();
         Assert.assertEquals("qwe123", TestHelper.getMaster());
         Assert.assertEquals("gmail.com", TestHelper.getSitename());
+        TestHelper.slpMs(5000);
+    }
+
+    //bug in this test case. version3
+    @Test
+    public void test13(){
+        TestHelper.setMaster("qwe123");
+        TestHelper.setSitename("gmail.com");
+        TestHelper.generate();
+        //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
+        findElement("//td/input[@name='master']").click();
+        findElement("//td/input[@name='master']").clear();
+
         TestHelper.slpMs(5000);
     }
 
