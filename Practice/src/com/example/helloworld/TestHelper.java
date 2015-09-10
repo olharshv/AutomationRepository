@@ -99,4 +99,20 @@ public class TestHelper {
     static boolean GeneratedPasswordEnable(){
         return findElement("//td/input[@name= 'password']").isEnabled();
     }
+
+    static String getMasterFieldName(){
+        return findElement("//tr[1]/td").getText();
+    }
+
+    static String getSiteFieldName(){
+        return findElement("//tr[2]/td").getText();
+    }
+
+    static String getGenerateButtonName(){
+        return findElement("//tr[3]/td/input").getAttribute("value");
+    }
+
+    static String getGeneratedPasswordName(){
+        return findElement("//tr[4]/td").getText();
+    }
 }

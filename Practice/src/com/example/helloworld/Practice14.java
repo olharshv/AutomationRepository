@@ -178,6 +178,16 @@ public static String url =
         //TestHelper.findElement("//td/input[@name='master']").clear();
         TestHelper.slpMs(5000);
     }
+    //bug in 5th version
+    @Test
+    public void test17(){
+        Assert.assertEquals("Your master password", TestHelper.getMasterFieldName());
+        Assert.assertEquals("Site name", TestHelper.getSiteFieldName());
+        Assert.assertEquals("Generate", TestHelper.getGenerateButtonName());
+        Assert.assertEquals("Generated password", TestHelper.getGeneratedPasswordName());
+        TestHelper.slpMs(5000);
+    }
+
 
     @Before
     public void funcBeforeEveryTest() {
