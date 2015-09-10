@@ -39,20 +39,20 @@ public class TestHelper {
 
     //функция  - заполнить первое поле
     static void setMaster(String filledString){
-        findElement("//td/input[@name='master']").sendKeys(filledString);
+        findElement("//tr[1]/td/input").sendKeys(filledString);
     }
 
     //функция - заполнить второе поле
     static void setSitename(String filledString){
-        findElement("//td/input[@name='site']").sendKeys(filledString);;
+        findElement("//tr[2]/td/input").sendKeys(filledString);;
     }
 
     public static String getMaster(){
-        return findElement("//td/input[@name='master']").getAttribute("value");
+        return findElement("//tr[1]/td/input").getAttribute("value");
     }
 
     public static String getSitename(){
-        return findElement("//td/input[@name='site']").getAttribute("value");
+        return findElement("//tr[2]/td/input").getAttribute("value");
     }
 
     //функция - нажать кнопку Generate
@@ -62,12 +62,12 @@ public class TestHelper {
 
     //функция  - достать из 3го
     static String getPassword(){
-        return findElement("//td/input[@name= 'password']").getAttribute("value");
+        return findElement("//tr[2]/td/input").getAttribute("value");
     }
 
     //Enter function
     static void submitEnter(){
-        findElement("//td/input[@name= 'password']").sendKeys(Keys.ENTER);
+        findElement("//tr[2]/td/input").sendKeys(Keys.ENTER);
     }
 //вынесли в отдельную функцию, чтобы не делать каждый раз setProperties
     static void setup(){
@@ -89,15 +89,15 @@ public class TestHelper {
     }
 
     static boolean MasterEnable(){
-        return findElement("//td/input[@name='master']").isEnabled();
+        return findElement("//tr[1]/td/input").isEnabled();
     }
 
     static boolean PasswordEnable(){
-        return findElement("//td/input[@name= 'password']").isEnabled();
+        return findElement("//tr[2]/td/input").isEnabled();
     }
 
     static boolean GeneratedPasswordEnable(){
-        return findElement("//td/input[@name= 'password']").isEnabled();
+        return findElement("//tr[2]/td/input").isEnabled();
     }
 
     static String getMasterFieldName(){
