@@ -11,7 +11,11 @@ import org.junit.Test;
 public class Practice14 {
 //убрать переменную drv из всех функций
     //убираем у ф-й static, чтобы у них был доступ к переменной класса drv
-public static String url = /*"http://angel.net/~nic/passwd.current.html"*/ /*"http://oxogamestudio.com/passwd.current2.htm"*/"http://oxogamestudio.com/passwd.current3.htm";
+public static String url =
+/*"http://angel.net/~nic/passwd.current.html"*/
+/*"http://oxogamestudio.com/passwd.current2.htm"*/
+        /*"http://oxogamestudio.com/passwd.current3.htm"*/
+        "http://oxogamestudio.com/passwd.current5.htm";
 
     public static void main() {
     }
@@ -138,14 +142,40 @@ public static String url = /*"http://angel.net/~nic/passwd.current.html"*/ /*"ht
 
     //bug in this test case. version3
     @Test
-    public void test13(){
+    public void test14(){
         TestHelper.setMaster("qwe123");
         TestHelper.setSitename("gmail.com");
         TestHelper.generate();
         //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
-        findElement("//td/input[@name='master']").click();
-        findElement("//td/input[@name='master']").clear();
+        //TestHelper.findElement("//td/input[@name='master']").click();
+        Assert.assertEquals(true, TestHelper.MasterEnable());
+        //TestHelper.findElement("//td/input[@name='master']").clear();
+        TestHelper.slpMs(5000);
+    }
 
+    //bug in this test case. version4
+    @Test
+    public void test15(){
+        TestHelper.setMaster("qwe123");
+        TestHelper.setSitename("gmail.com");
+        TestHelper.generate();
+        //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
+        //TestHelper.findElement("//td/input[@name='master']").click();
+        Assert.assertEquals(true, TestHelper.PasswordEnable());
+        //TestHelper.findElement("//td/input[@name='master']").clear();
+        TestHelper.slpMs(5000);
+    }
+
+    //bug in this test case. version4
+    @Test
+    public void test16(){
+        TestHelper.setMaster("qwe123");
+        TestHelper.setSitename("gmail.com");
+        TestHelper.generate();
+        //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
+        //TestHelper.findElement("//td/input[@name='master']").click();
+        Assert.assertEquals(true, TestHelper.GeneratedPasswordEnable());
+        //TestHelper.findElement("//td/input[@name='master']").clear();
         TestHelper.slpMs(5000);
     }
 

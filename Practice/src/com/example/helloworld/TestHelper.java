@@ -88,5 +88,15 @@ public class TestHelper {
         TestHelper.drv.quit();
     }
 
+    static boolean MasterEnable(){
+        return findElement("//td/input[@name='master']").isEnabled();
+    }
 
+    static boolean PasswordEnable(){
+        return findElement("//td/input[@name= 'password']").isEnabled();
+    }
+
+    static boolean GeneratedPasswordEnable(){
+        return findElement("//td/input[@name= 'password']").isEnabled();
+    }
 }
