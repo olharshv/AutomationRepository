@@ -12,10 +12,10 @@ public class Practice14 {
 //убрать переменную drv из всех функций
     //убираем у ф-й static, чтобы у них был доступ к переменной класса drv
 public static String url =
-"http://angel.net/~nic/passwd.current.html";
+/*"http://angel.net/~nic/passwd.current.html";*/
 /*"http://oxogamestudio.com/passwd.current2.htm"*/
         /*"http://oxogamestudio.com/passwd.current3.htm"*/
-       // "http://oxogamestudio.com/passwd.current6.htm";
+        "http://oxogamestudio.com/passwd.current6.htm";
 
     public static void main() {
     }
