@@ -62,7 +62,7 @@ public class TestHelper {
 
     //функция  - достать из 3го
     static String getPassword(){
-        return findElement("//tr[2]/td/input").getAttribute("value");
+        return findElement("//tr[4]/td/input").getAttribute("value");
     }
 
     //Enter function
@@ -97,7 +97,7 @@ public class TestHelper {
     }
 
     static boolean GeneratedPasswordEnable(){
-        return findElement("//tr[2]/td/input").isEnabled();
+        return findElement("//tr[4]/td/input").isEnabled();
     }
 
     static String getMasterFieldName(){
