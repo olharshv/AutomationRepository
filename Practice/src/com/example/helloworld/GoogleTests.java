@@ -10,6 +10,6 @@ public class GoogleTests {
     public void searchTest() {
         TestHelper.setup();
         //для тестирования гугла не имеет смысла использование следующего метода. поэтому из TestHelper надо разнести...
-        TestHelper.getMaster();
+        AngelPage.getMaster();
     }
 }

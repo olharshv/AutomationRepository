@@ -22,133 +22,133 @@ public static String url =
 
     @Test
     public void test1() {
-        TestHelper.setMaster("master");
-        TestHelper.setSitename("google.com");
-        TestHelper.generate();
-        System.out.println(TestHelper.getPassword());
+        AngelPage.setMaster("master");
+        AngelPage.setSitename("google.com");
+        AngelPage.generate();
+        System.out.println(AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test2() {
-        TestHelper.setMaster("hello");
-        TestHelper.setSitename("google.com");
-        TestHelper.generate();
-        System.out.println(TestHelper.getPassword());
+        AngelPage.setMaster("hello");
+        AngelPage.setSitename("google.com");
+        AngelPage.generate();
+        System.out.println(AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
     //
     @Test
     public void test3() {
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("gmail.com");
-        TestHelper.submitEnter();
-        Assert.assertEquals("mKJAakDvwbhi6@1a", TestHelper.getPassword());
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("gmail.com");
+        AngelPage.submitEnter();
+        Assert.assertEquals("mKJAakDvwbhi6@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test4(){
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("gmail.com");
-        TestHelper.generate();
-        Assert.assertEquals("mKJAakDvwbhi6@1a", TestHelper.getPassword());
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("gmail.com");
+        AngelPage.generate();
+        Assert.assertEquals("mKJAakDvwbhi6@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test5(){
-        TestHelper.setMaster("");
-        TestHelper.setSitename("");
-        TestHelper.generate();
-        Assert.assertEquals("BaefBs8/Z/cm2@1a", TestHelper.getPassword());
+        AngelPage.setMaster("");
+        AngelPage.setSitename("");
+        AngelPage.generate();
+        Assert.assertEquals("BaefBs8/Z/cm2@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test6(){
-        TestHelper.setMaster("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        TestHelper.setSitename("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
-        TestHelper.generate();
-        Assert.assertEquals("D3YvdfMKPtXGn@1a", TestHelper.getPassword());
+        AngelPage.setMaster("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        AngelPage.setSitename("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+        AngelPage.generate();
+        Assert.assertEquals("D3YvdfMKPtXGn@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test7(){
-        TestHelper.setMaster("");
-        TestHelper.submitEnter();
-        TestHelper.generate();
-        Assert.assertEquals("BaefBs8/Z/cm2@1a", TestHelper.getPassword());
+        AngelPage.setMaster("");
+        AngelPage.submitEnter();
+        AngelPage.generate();
+        Assert.assertEquals("BaefBs8/Z/cm2@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test8(){
-        TestHelper.setMaster("333");
-        TestHelper.setSitename("111");
-        TestHelper.generate();
-        Assert.assertEquals("CD/iUTsNwzV4v@1a", TestHelper.getPassword());
+        AngelPage.setMaster("333");
+        AngelPage.setSitename("111");
+        AngelPage.generate();
+        Assert.assertEquals("CD/iUTsNwzV4v@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test9(){
-        TestHelper.setMaster("111");
-        TestHelper.setSitename("333");
-        TestHelper.generate();
-        Assert.assertEquals("A61tAOVfX4wCm@1a", TestHelper.getPassword());
+        AngelPage.setMaster("111");
+        AngelPage.setSitename("333");
+        AngelPage.generate();
+        Assert.assertEquals("A61tAOVfX4wCm@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test10(){
-        TestHelper.setMaster("~!@#$%^&*()_+{}|\":?></\\");
-        TestHelper.setSitename("~!@#$%^&*()_+{}|\":?></\\");
-        TestHelper.generate();
-        Assert.assertEquals("mWxGz2VYwGgZK@1a", TestHelper.getPassword());
+        AngelPage.setMaster("~!@#$%^&*()_+{}|\":?></\\");
+        AngelPage.setSitename("~!@#$%^&*()_+{}|\":?></\\");
+        AngelPage.generate();
+        Assert.assertEquals("mWxGz2VYwGgZK@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
 
     @Test
     public void test11(){
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("asd");
-        TestHelper.generate();
-        Assert.assertEquals("agdjoTB4cjI5E@1a", TestHelper.getPassword());
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("asd");
+        AngelPage.generate();
+        Assert.assertEquals("agdjoTB4cjI5E@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     @Test
     public void test12(){
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("ASD");
-        TestHelper.generate();
-        Assert.assertEquals("FkfaCm2ddwvDg@1a", TestHelper.getPassword());
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("ASD");
+        AngelPage.generate();
+        Assert.assertEquals("FkfaCm2ddwvDg@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
 
     //bug in this test case. version2
     @Test
     public void test13(){
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("gmail.com");
-        TestHelper.generate();
-        Assert.assertEquals("qwe123", TestHelper.getMaster());
-        Assert.assertEquals("gmail.com", TestHelper.getSitename());
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("gmail.com");
+        AngelPage.generate();
+        Assert.assertEquals("qwe123", AngelPage.getMaster());
+        Assert.assertEquals("gmail.com", AngelPage.getSitename());
         TestHelper.slpMs(5000);
     }
 
     //bug in this test case. version3
     @Test
     public void test14(){
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("gmail.com");
-        TestHelper.generate();
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("gmail.com");
+        AngelPage.generate();
         //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
         //TestHelper.findElement("//td/input[@name='master']").click();
-        Assert.assertEquals(true, TestHelper.MasterEnable());
+        Assert.assertEquals(true, AngelPage.MasterEnable());
         //TestHelper.findElement("//td/input[@name='master']").clear();
         TestHelper.slpMs(5000);
     }
@@ -156,12 +156,12 @@ public static String url =
     //bug in this test case. version4
     @Test
     public void test15(){
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("gmail.com");
-        TestHelper.generate();
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("gmail.com");
+        AngelPage.generate();
         //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
         //TestHelper.findElement("//td/input[@name='master']").click();
-        Assert.assertEquals(true, TestHelper.PasswordEnable());
+        Assert.assertEquals(true, AngelPage.PasswordEnable());
         //TestHelper.findElement("//td/input[@name='master']").clear();
         TestHelper.slpMs(5000);
     }
@@ -169,22 +169,22 @@ public static String url =
     //bug in this test case. version4
     @Test
     public void test16(){
-        TestHelper.setMaster("qwe123");
-        TestHelper.setSitename("gmail.com");
-        TestHelper.generate();
+        AngelPage.setMaster("qwe123");
+        AngelPage.setSitename("gmail.com");
+        AngelPage.generate();
         //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
         //TestHelper.findElement("//td/input[@name='master']").click();
-        Assert.assertEquals(true, TestHelper.GeneratedPasswordEnable());
+        Assert.assertEquals(true, AngelPage.GeneratedPasswordEnable());
         //TestHelper.findElement("//td/input[@name='master']").clear();
         TestHelper.slpMs(5000);
     }
     //bug in 5th version
     @Test
     public void test17(){
-        Assert.assertEquals("Your master password", TestHelper.getMasterFieldName());
-        Assert.assertEquals("Site name", TestHelper.getSiteFieldName());
-        Assert.assertEquals("Generate", TestHelper.getGenerateButtonName());
-        Assert.assertEquals("Generated password", TestHelper.getGeneratedPasswordName());
+        Assert.assertEquals("Your master password", AngelPage.getMasterFieldName());
+        Assert.assertEquals("Site name", AngelPage.getSiteFieldName());
+        Assert.assertEquals("Generate", AngelPage.getGenerateButtonName());
+        Assert.assertEquals("Generated password", AngelPage.getGeneratedPasswordName());
         TestHelper.slpMs(5000);
     }
 
