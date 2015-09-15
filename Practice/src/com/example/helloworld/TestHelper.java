@@ -55,4 +55,8 @@ public class TestHelper {
         TestHelper.drv.quit();
     }
 
+    /*static void timeOutFunc {
+        drv.Timeouts
+    }*/
+
 }
