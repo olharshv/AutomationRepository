@@ -10,17 +10,12 @@ public class Door {
     public String changeStateVar = "Closed";
     public static String made = "China";
 
-    public String getColorValue(){
-      return color;
-    }
-
     public String state(){
         return changeStateVar;
     }
 
-    public String open(){
+    public void open(){
         changeStateVar = "Open";
-        return changeStateVar;
     }
 
 
