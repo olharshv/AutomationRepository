@@ -54,9 +54,19 @@ public class TestHelper {
     static void quit (){
         TestHelper.drv.quit();
     }
-
-    /*static void timeOutFunc {
-        drv.Timeouts
-    }*/
+//добавить эту ф-ю в getPassword
+    static WebElement waitForValue(String targetXPath) {
+        findElement(targetXPath, TestHelper.drv);
+        for (int i = 0; i < 600; i++)
+        {
+            WebElement inp = TestHelper.drv.findElement(By.xpath(targetXPath));
+            if (inp.getAttribute("value").length() > 0)
+            {
+                break;
+            }
+            slpMs(100);
+        }
+        return drv.findElement(By.xpath(targetXPath));
+    }
 
 }
