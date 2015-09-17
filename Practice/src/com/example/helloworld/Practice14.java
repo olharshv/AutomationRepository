@@ -15,7 +15,7 @@ public static String url =
 /*"http://angel.net/~nic/passwd.current.html";*/
 /*"http://oxogamestudio.com/passwd.current2.htm"*/
         /*"http://oxogamestudio.com/passwd.current3.htm"*/
-        "http://oxogamestudio.com/passwd.current8.htm";
+        "http://oxogamestudio.com/passwd.current9.htm";
 
     public static void main() {
     }
@@ -25,6 +25,7 @@ public static String url =
         AngelPage.setMaster("master");
         AngelPage.setSitename("google.com");
         AngelPage.generate();
+
         System.out.println(AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }

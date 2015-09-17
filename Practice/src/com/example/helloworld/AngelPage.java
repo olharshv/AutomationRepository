@@ -79,4 +79,6 @@ public class AngelPage {
 
     static void waitForGenerateButton() { TestHelper.waitForValue(elementGenerateButton);    }
 
+    static void alertCheck() {}
+
 }
