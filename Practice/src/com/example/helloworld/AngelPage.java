@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by OlhaY on 9/10/2015.
@@ -79,6 +80,5 @@ public class AngelPage {
 
     static void waitForGenerateButton() { TestHelper.waitForValue(elementGenerateButton);    }
 
-    static void alertCheck() {}
 
 }

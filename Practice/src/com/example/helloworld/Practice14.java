@@ -25,7 +25,7 @@ public static String url =
         AngelPage.setMaster("master");
         AngelPage.setSitename("google.com");
         AngelPage.generate();
-
+        TestHelper.alertCheck();
         System.out.println(AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -35,6 +35,7 @@ public static String url =
         AngelPage.setMaster("hello");
         AngelPage.setSitename("google.com");
         AngelPage.generate();
+        TestHelper.alertCheck();
         System.out.println(AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -45,6 +46,7 @@ public static String url =
         AngelPage.setSitename("gmail.com");
         AngelPage.waitForGenerateButton();
         AngelPage.submitEnter();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("mKJAakDvwbhi6@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -55,6 +57,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("mKJAakDvwbhi6@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -65,6 +68,7 @@ public static String url =
         AngelPage.setMaster("");
         AngelPage.setSitename("");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("BaefBs8/Z/cm2@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -75,6 +79,7 @@ public static String url =
         AngelPage.setMaster("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         AngelPage.setSitename("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("D3YvdfMKPtXGn@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -83,8 +88,9 @@ public static String url =
     @Test
     public void test7(){
         AngelPage.setMaster("");
+        AngelPage.setSitename("");
         AngelPage.submitEnter();
-        AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("BaefBs8/Z/cm2@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -95,6 +101,7 @@ public static String url =
         AngelPage.setMaster("333");
         AngelPage.setSitename("111");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("CD/iUTsNwzV4v@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -105,6 +112,7 @@ public static String url =
         AngelPage.setMaster("111");
         AngelPage.setSitename("333");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("A61tAOVfX4wCm@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -115,6 +123,7 @@ public static String url =
         AngelPage.setMaster("~!@#$%^&*()_+{}|\":?></\\");
         AngelPage.setSitename("~!@#$%^&*()_+{}|\":?></\\");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("mWxGz2VYwGgZK@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -126,6 +135,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("asd");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("agdjoTB4cjI5E@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -136,6 +146,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("ASD");
         AngelPage.generate();
+        TestHelper.alertCheck();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("FkfaCm2ddwvDg@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
@@ -147,6 +158,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
         AngelPage.generate();
+        TestHelper.alertCheck();
         Assert.assertEquals("qwe123", AngelPage.getMaster());
         Assert.assertEquals("gmail.com", AngelPage.getSitename());
         TestHelper.slpMs(5000);
@@ -158,6 +170,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
         AngelPage.generate();
+        TestHelper.alertCheck();
         //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
         //TestHelper.findElement("//td/input[@name='master']").click();
         Assert.assertEquals(true, AngelPage.MasterEnable());
@@ -171,6 +184,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
         AngelPage.generate();
+        TestHelper.alertCheck();
         //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
         //TestHelper.findElement("//td/input[@name='master']").click();
         Assert.assertEquals(true, AngelPage.PasswordEnable());
@@ -184,6 +198,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
         AngelPage.generate();
+        TestHelper.alertCheck();
         //попробовать очистить поле Master isEnabled - свойство, вернет true, false. assert(true, ...)
         //TestHelper.findElement("//td/input[@name='master']").click();
         Assert.assertEquals(true, AngelPage.GeneratedPasswordEnable());

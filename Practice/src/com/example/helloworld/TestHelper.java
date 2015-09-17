@@ -1,9 +1,13 @@
 package com.example.helloworld;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 /**
  * Created by OlhaY on 9/8/2015.
@@ -69,4 +73,15 @@ public class TestHelper {
         return drv.findElement(By.xpath(targetXPath));
     }
 
+    static void alertCheck() {
+        try {
+            WebDriverWait wait = new WebDriverWait(drv, 2);
+            wait.until(ExpectedConditions.alertIsPresent());
+            Alert alert = drv.switchTo().alert();
+            alert.accept();
+        } catch (Exception e) {
+            //exception handling
+            System.out.println(e);
+        }
+    }
 }
