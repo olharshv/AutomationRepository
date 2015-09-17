@@ -66,4 +66,6 @@ public class AngelPage {
     static String getGeneratedPasswordName(){
         return TestHelper.findElement("//tr[4]/td").getText();
     }
+
+    static void waitForGeneratedPassword() { TestHelper.waitForValue("//tr[4]/td/input");    }
 }

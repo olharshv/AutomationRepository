@@ -56,7 +56,7 @@ public class TestHelper {
     }
 //добавить эту ф-ю в getPassword
     static WebElement waitForValue(String targetXPath) {
-        findElement(targetXPath);
+        TestHelper.findElement(targetXPath);
         for (int i = 0; i < 600; i++)
         {
             WebElement inp = TestHelper.drv.findElement(By.xpath(targetXPath));

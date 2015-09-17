@@ -15,7 +15,7 @@ public static String url =
 /*"http://angel.net/~nic/passwd.current.html";*/
 /*"http://oxogamestudio.com/passwd.current2.htm"*/
         /*"http://oxogamestudio.com/passwd.current3.htm"*/
-        "http://oxogamestudio.com/passwd.current6.htm";
+        "http://oxogamestudio.com/passwd.current7.htm";
 
     public static void main() {
     }
@@ -43,6 +43,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
         AngelPage.submitEnter();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("mKJAakDvwbhi6@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -52,6 +53,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("mKJAakDvwbhi6@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -61,6 +63,7 @@ public static String url =
         AngelPage.setMaster("");
         AngelPage.setSitename("");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("BaefBs8/Z/cm2@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -70,6 +73,7 @@ public static String url =
         AngelPage.setMaster("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         AngelPage.setSitename("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("D3YvdfMKPtXGn@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -79,6 +83,7 @@ public static String url =
         AngelPage.setMaster("");
         AngelPage.submitEnter();
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("BaefBs8/Z/cm2@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -88,6 +93,7 @@ public static String url =
         AngelPage.setMaster("333");
         AngelPage.setSitename("111");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("CD/iUTsNwzV4v@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -97,6 +103,7 @@ public static String url =
         AngelPage.setMaster("111");
         AngelPage.setSitename("333");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("A61tAOVfX4wCm@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -106,6 +113,7 @@ public static String url =
         AngelPage.setMaster("~!@#$%^&*()_+{}|\":?></\\");
         AngelPage.setSitename("~!@#$%^&*()_+{}|\":?></\\");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("mWxGz2VYwGgZK@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -116,6 +124,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("asd");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("agdjoTB4cjI5E@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
@@ -125,6 +134,7 @@ public static String url =
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("ASD");
         AngelPage.generate();
+        AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("FkfaCm2ddwvDg@1a", AngelPage.getPassword());
         TestHelper.slpMs(5000);
     }
