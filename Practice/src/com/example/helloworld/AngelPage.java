@@ -68,4 +68,7 @@ public class AngelPage {
     }
 
     static void waitForGeneratedPassword() { TestHelper.waitForValue("//tr[4]/td/input");    }
+
+    static void waitForGenerateButton() { TestHelper.waitForValue("//tr[3]/td/input");    }
+
 }

@@ -15,7 +15,7 @@ public static String url =
 /*"http://angel.net/~nic/passwd.current.html";*/
 /*"http://oxogamestudio.com/passwd.current2.htm"*/
         /*"http://oxogamestudio.com/passwd.current3.htm"*/
-        "http://oxogamestudio.com/passwd.current7.htm";
+        "http://oxogamestudio.com/passwd.current8.htm";
 
     public static void main() {
     }
@@ -42,6 +42,7 @@ public static String url =
     public void test3() {
         AngelPage.setMaster("qwe123");
         AngelPage.setSitename("gmail.com");
+        AngelPage.waitForGenerateButton();
         AngelPage.submitEnter();
         AngelPage.waitForGeneratedPassword();
         Assert.assertEquals("mKJAakDvwbhi6@1a", AngelPage.getPassword());
