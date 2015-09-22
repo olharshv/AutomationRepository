@@ -16,7 +16,9 @@ public class Practice16 {
     @Test
     public void test1(){
         BookingUzGovUA.setElementFrom("Kyi");
-        BookingUzGovUA.chooseElementKyiv();
+        BookingUzGovUA.chooseElementFrom("Kyiv");
+        BookingUzGovUA.setElementTo("Ivano");
+        BookingUzGovUA.chooseElementTo("Ivano-Frankivsk");
         TestHelper.slpMs(5000);
 
     }
