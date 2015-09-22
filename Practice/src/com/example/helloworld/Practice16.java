@@ -19,6 +19,7 @@ public class Practice16 {
         BookingUzGovUA.chooseElementFrom("Kyiv");
         BookingUzGovUA.setElementTo("Ivano");
         BookingUzGovUA.chooseElementTo("Ivano-Frankivsk");
+        BookingUzGovUA.setElementDate("20", "10", "2015");
         TestHelper.slpMs(5000);
 
     }

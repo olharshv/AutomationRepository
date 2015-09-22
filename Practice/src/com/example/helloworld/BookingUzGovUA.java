@@ -8,7 +8,8 @@ public class BookingUzGovUA {
     private static String elementFrom = "//div[contains(@class, 'stations')]/div[1]/input";
     private static String elementTo = "//div[contains(@id, 'station_till')]/input";
 
-    private static String elementDate = "";
+    private static String elementDate = "//div[contains(@class, 'options')]/div/label/input";
+
     private static String elementSearch = "";
     private static String elementCoupePlace = "";
     private static String elementPlaceNumber = "";
@@ -24,6 +25,10 @@ public class BookingUzGovUA {
 
     static void chooseElementTo(String townName){
         String elementTown = "//div[contains(@id, 'station_till')]/div/div[@title='" + townName + "']";
-        TestHelper.findElement(elementTown).click();}
+        TestHelper.findElement(elementTown).click();
+    }
 
+    static void setElementDate(String dateNumber, String dateMonth, String dateYear) {
+        TestHelper.findElement(elementDate).sendKeys(filledDate);
+    }
 }
