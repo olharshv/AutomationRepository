@@ -29,6 +29,14 @@ public class BookingUzGovUA {
     }
 
     static void setElementDate(String dateNumber, String dateMonth, String dateYear) {
-        TestHelper.findElement(elementDate).sendKeys(filledDate);
+        TestHelper.findElement(elementDate).click();
+        TestHelper.slpMs(5000);
+        String elementDateNumber = "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[text() = '" + dateNumber + "']";
+        String elementDateMonthYear = "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/caption[text() = '" + dateMonth + " " + dateYear + "']";
+        TestHelper.findElement(elementDateNumber).sendKeys(dateNumber);
+        TestHelper.findElement(elementDateMonthYear).sendKeys(dateMonth);
+        TestHelper.findElement(elementDateMonthYear).sendKeys(dateYear);
+
+
     }
 }
