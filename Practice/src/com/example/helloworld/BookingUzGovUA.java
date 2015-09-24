@@ -31,7 +31,8 @@ public class BookingUzGovUA {
     static void setElementDate(String dateNumber, String month, String dateYear) {
 
         String elementDateNumber =
-                "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[text()='" + dateNumber + "']";
+                "/html/body/div[2]/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td[3]";
+           //     "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[text()='" + dateNumber + "']";
 
         //String elementDateMonthYear = "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/caption[text() = '" + dateMonth + " " + dateYear + "']";
         String elementDateMonthYear =
@@ -39,7 +40,7 @@ public class BookingUzGovUA {
 
         TestHelper.findElement(elementDate).click();
         TestHelper.slpMs(5000);
-        TestHelper.findElement(elementDateMonthYear);
+        //TestHelper.findElement(elementDateMonthYear);
         TestHelper.findElement(elementDateNumber).click();
        // TestHelper.findElement(elementDateMonthYear).sendKeys(dateYear);
 
