@@ -10,7 +10,7 @@ public class BookingUzGovUA {
 
     private static String elementDate = "//div[contains(@class, 'options')]/div/label/input";
 
-    private static String elementSearch = "";
+    private static String elementSearchButton = "//*[@id=\"content\"]/form/p/button";
     private static String elementCoupePlace = "";
     private static String elementPlaceNumber = "";
 
@@ -46,7 +46,18 @@ public class BookingUzGovUA {
 
       //  TestHelper.findElement(elementDate).click();
         TestHelper.slpMs(5000);
-
-
     }
+
+    static void pushSearchButton(){
+        TestHelper.findElement(elementSearchButton).click();
+        TestHelper.slpMs(5000);
+    }
+
+    static void chooseTrain(String train){
+        String elementTrain = "//*[@id=\"ts_res_tbl\"]/tbody/tr[2]/td[1]/a";
+        TestHelper.findElement(elementTrain).click();
+    }
+    /*public static void listOfFoundTrains(List<String> trains){
+    TestHelper.findElements(By.tagName("a"));
+    }*/
 }
