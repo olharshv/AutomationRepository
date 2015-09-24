@@ -19,10 +19,11 @@ public class Practice16 {
         BookingUzGovUA.chooseElementFrom("Kyiv");
         BookingUzGovUA.setElementTo("Ivano");
         BookingUzGovUA.chooseElementTo("Ivano-Frankivsk");
-        //rewrite this function!!!
-        BookingUzGovUA.setElementDate("16", "November", "2015");
+        BookingUzGovUA.setElementDate("20", "October", "2015");
         BookingUzGovUA.pushSearchButton();
         BookingUzGovUA.chooseTrain("043К");
+        BookingUzGovUA.closeTrainRoute();
+        BookingUzGovUA.choosePlace();
         TestHelper.slpMs(5000);
 
     }
@@ -33,7 +34,5 @@ public class Practice16 {
     }
 
     @After
-    public void funcAfterEveryTest() {
-        TestHelper.quit();
-    }
+    public void funcAfterEveryTest() { TestHelper.quit(); }
 }
