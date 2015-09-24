@@ -57,8 +57,8 @@ public class BookingUzGovUA {
         TestHelper.slpMs(5000);
     }
 
-    static void choosePlace(){
-        String elementTrainPlace = "//*[@id=\"ts_res_tbl\"]/tbody/tr[2]/td[6]/div[2]/button";
+    static void choosePlace(String trainNumber, String placeType){
+        String elementTrainPlace = "//a[text()=\"" + trainNumber + "\"]/../..//div[@title=\"" + placeType + "\"]/button";
         TestHelper.findElement(elementTrainPlace).click();
     }
     /*public static void listOfFoundTrains(List<String> trains){

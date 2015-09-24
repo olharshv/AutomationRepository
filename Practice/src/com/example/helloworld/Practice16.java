@@ -21,9 +21,9 @@ public class Practice16 {
         BookingUzGovUA.chooseElementTo("Ivano-Frankivsk");
         BookingUzGovUA.setElementDate("20", "October", "2015");
         BookingUzGovUA.pushSearchButton();
-        BookingUzGovUA.chooseTrain("043К");
+        BookingUzGovUA.chooseTrain("043 К");
         BookingUzGovUA.closeTrainRoute();
-        BookingUzGovUA.choosePlace();
+        BookingUzGovUA.choosePlace("043 К", "Coupe / coach with compartments");
         TestHelper.slpMs(5000);
 
     }
