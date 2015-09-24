@@ -46,6 +46,7 @@ public class BookingUzGovUA {
         TestHelper.slpMs(5000);
     }
 
+    //rewrite for variable train!!!
     static void chooseTrain(String train){
         String elementTrain = "//*[@id=\"ts_res_tbl\"]/tbody/tr[2]/td[1]/a";
         TestHelper.findElement(elementTrain).click();
@@ -57,11 +58,15 @@ public class BookingUzGovUA {
         TestHelper.slpMs(5000);
     }
 
-    static void choosePlace(String trainNumber, String placeType){
-        String elementTrainPlace = "//a[text()=\"" + trainNumber + "\"]/../..//div[@title=\"" + placeType + "\"]/button";
-        TestHelper.findElement(elementTrainPlace).click();
+    static void choosePlaceType(String trainNumber, String placeType){
+        String elementTrainPlaceType = "//a[text()=\"" + trainNumber + "\"]/../..//div[@title=\"" + placeType + "\"]/button";
+        TestHelper.slpMs(2000);
+        TestHelper.findElement(elementTrainPlaceType).click();
     }
-    /*public static void listOfFoundTrains(List<String> trains){
-    TestHelper.findElements(By.tagName("a"));
-    }*/
+
+    public static void choosePlaceNumber(){
+        String elementPlaceNumber = "//*[@id=\"places\"]/p[6]/a[1]/span";
+        TestHelper.slpMs(2000);
+        TestHelper.findElement(elementPlaceNumber).click();
+    }
 }

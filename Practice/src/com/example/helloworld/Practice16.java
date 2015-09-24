@@ -23,7 +23,8 @@ public class Practice16 {
         BookingUzGovUA.pushSearchButton();
         BookingUzGovUA.chooseTrain("043 К");
         BookingUzGovUA.closeTrainRoute();
-        BookingUzGovUA.choosePlace("043 К", "Coupe / coach with compartments");
+        BookingUzGovUA.choosePlaceType("043 К", "Coupe / coach with compartments");
+        BookingUzGovUA.choosePlaceNumber();
         TestHelper.slpMs(5000);
 
     }
