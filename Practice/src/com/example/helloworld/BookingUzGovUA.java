@@ -69,4 +69,16 @@ public class BookingUzGovUA {
         TestHelper.slpMs(2000);
         TestHelper.findElement(elementPlaceNumber).click();
     }
+
+    public static setLastName (lastName){
+        String elementLastName = "";
+        TestHelper.slpMs(2000);
+        TestHelper.findElement(elementLastName).click();
+    }
+
+    public static setFirstName (firstName){
+        String elementFirstName = "";
+        TestHelper.slpMs(2000);
+        TestHelper.findElement(elementFirstName).click();
+    }
 }
