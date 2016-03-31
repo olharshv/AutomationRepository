@@ -70,7 +70,7 @@ public class BookingUzGovUA {
         TestHelper.findElement(elementPlaceNumber).click();
     }
 
-    public static setLastName (lastName){
+    /*public static setLastName (lastName){
         String elementLastName = "";
         TestHelper.slpMs(2000);
         TestHelper.findElement(elementLastName).click();
@@ -80,5 +80,5 @@ public class BookingUzGovUA {
         String elementFirstName = "";
         TestHelper.slpMs(2000);
         TestHelper.findElement(elementFirstName).click();
-    }
+    }*/
 }

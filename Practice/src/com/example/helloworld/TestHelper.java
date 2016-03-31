@@ -42,7 +42,7 @@ public class TestHelper {
 
     //вынесли в отдельную функцию, чтобы не делать каждый раз setProperties
     static void setup(){
-        System.setProperty("webdriver.chrome.driver", "C:\\libJava\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\libJava\\chromedriver_win32.exe");
         TestHelper.drv = new ChromeDriver();
     }
 
