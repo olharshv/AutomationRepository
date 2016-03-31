@@ -19,7 +19,7 @@ public class Practice16 {
         BookingUzGovUA.chooseElementFrom("Kyiv");
         BookingUzGovUA.setElementTo("Ivano");
         BookingUzGovUA.chooseElementTo("Ivano-Frankivsk");
-        BookingUzGovUA.setElementDate("20", "October", "2015");
+        BookingUzGovUA.setElementDate("20", "April", "2016");
         BookingUzGovUA.pushSearchButton();
         BookingUzGovUA.chooseTrain("043 К");
         BookingUzGovUA.closeTrainRoute();
