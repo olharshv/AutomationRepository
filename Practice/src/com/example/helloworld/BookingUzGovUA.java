@@ -29,7 +29,9 @@ public class BookingUzGovUA {
     }
 
     static void setElementDate(String dateNumber, String dateMonth, String dateYear) {
-        String elementDateNumber = "//*[text()='" + dateMonth + " " + dateYear + "']/..//td[text()='" + dateNumber + "']";
+        String elementDateNumber = "//*[@id=\"ui-datepicker-div\"]/div[1]/table/tbody/tr[3]/td[5]/a";
+        //String elementDateNumber = "//*[text()= '" + dateMonth + " " + dateYear + "']/..//td[text()='" + dateNumber + "']";
+             /*old code*/
              //   "/html/body/div[2]/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td[3]";
            //     "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[text()='" + dateNumber + "']";
         //String elementDateMonthYear = "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/caption[text() = '" + dateMonth + " " + dateYear + "']";
