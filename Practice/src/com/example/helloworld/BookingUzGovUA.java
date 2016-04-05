@@ -29,15 +29,9 @@ public class BookingUzGovUA {
     }
 
     static void setElementDate(String dateNumber, String dateMonth, String dateYear) {
-        String elementDateNumber = "//*[@id=\"ui-datepicker-div\"]/div[1]/table/tbody/tr[3]/td[5]/a";
+        String elementDateNumber = "//*[text()=\"" + dateMonth + "\" and \"" + dateYear + "\"]/..//..//..//tr/td/a[contains(text(),\"" +dateNumber + "\")]";
+        /*old code*/
         //String elementDateNumber = "//*[text()= '" + dateMonth + " " + dateYear + "']/..//td[text()='" + dateNumber + "']";
-             /*old code*/
-             //   "/html/body/div[2]/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td[3]";
-           //     "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[text()='" + dateNumber + "']";
-        //String elementDateMonthYear = "//div[@class=\"rui-re-anchor\"]/div[1]/table/tbody/tr/td[2]/table/caption[text() = '" + dateMonth + " " + dateYear + "']";
-        //String elementDateMonthYear =
-         //       "//div[@class=\"rui-re-anchor\"]/div[@class=\"rui-calendar rui-panel\"]/table/tbody/tr/td/table/caption[text() = '" + month + " 2015']";
-
         TestHelper.findElement(elementDate).click();
         TestHelper.findElement(elementDateNumber).click();
         TestHelper.slpMs(5000);
@@ -48,10 +42,8 @@ public class BookingUzGovUA {
         TestHelper.slpMs(5000);
     }
 
-    //rewrite for variable train!!!
     static void chooseTrain(String train){
         String elementTrain = "//*[@id=\"ts_res_tbl\"]/.//tr/td/a[contains(text(),\"" + train +"\")]";
-       // String elementTrain = "//*[@id=\"ts_res_tbl\"]/tbody/tr[2]/td[1]/a";
         TestHelper.findElement(elementTrain).click();
     }
 
@@ -67,6 +59,7 @@ public class BookingUzGovUA {
         TestHelper.findElement(elementTrainPlaceType).click();
     }
 
+    //rewrite to be able to put a place number here
     public static void choosePlaceNumber(){
         String elementPlaceNumber = "//*[@id=\"places\"]/p[6]/a[1]/span";
         TestHelper.slpMs(2000);
