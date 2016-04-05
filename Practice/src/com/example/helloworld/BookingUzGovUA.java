@@ -50,7 +50,8 @@ public class BookingUzGovUA {
 
     //rewrite for variable train!!!
     static void chooseTrain(String train){
-        String elementTrain = "//*[@id=\"ts_res_tbl\"]/tbody/tr[2]/td[1]/a";
+        String elementTrain = "//*[@id=\"ts_res_tbl\"]/.//tr/td/a[contains(text(),\"" + train +"\")]";
+       // String elementTrain = "//*[@id=\"ts_res_tbl\"]/tbody/tr[2]/td[1]/a";
         TestHelper.findElement(elementTrain).click();
     }
 
